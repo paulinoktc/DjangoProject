@@ -1,0 +1,92 @@
+{% extends "master.html" %}
+
+{% load static %}
+
+{% block title %}Detalles Cliente{% endblock %}
+
+{% block content %}
+<div class="container-fluid text-center">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-header bg-primary text-white text-center rounded-top-4">
+                        <h3 class="mb-0">Detalles del Cliente</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row mb-3">
+                            <div class="col-sm-4 fw-bold">ID:</div>
+                            <div id="id" class="col-sm-8">..</div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-4 fw-bold">Nombre:</div>
+                            <div id="name" class="col-sm-8">..</div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-4 fw-bold">Correo:</div>
+                            <div id="email" class="col-sm-8">...</div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-4 fw-bold">Teléfono:</div>
+                            <div id="phone" class="col-sm-8">...</div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-4 fw-bold">Registrado:</div>
+                            <div id="created_at" class="col-sm-8">...</div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="/clientes/" class="btn btn-secondary">Volver</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="table-responsive m-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contratoModal">
+                Add Contrato
+            </button>
+            <table id="table-contratos" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">N° Contrato</th>
+                        <th scope="col">Monto</th>
+                        <th scope="col">fecha inicio</th>
+                        <th scope="col">fecha fin</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+{% include 'modals/edit_contrato_modal.html' %}
+
+{% include 'modals/add_contrato_modal.html' %}
+
+<div id="cliente-details" data-id="{{ id }}"></div>
+{% endblock %}
+
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="{% static 'js/clienteDetails.js' %}"></script>
+{% endblock %}

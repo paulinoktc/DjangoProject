@@ -1,0 +1,37 @@
+<!-- Modal Edit -->
+<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEditLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalEditLabel">Edit Client</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form id="formEdit" method="POST" action="" enctype="multipart/form-data">
+                    <input type="hidden" id="edit-id" name="id">
+
+                    <div class="form-group">
+                        <label for="edit-name" class="form-label">Nombre Cliente</label>
+                        <input name="name" type="text" class="form-control" id="edit-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-email" class="form-label">Correo Cliente</label>
+                        <input name="email" type="email" class="form-control" id="edit-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-phone" class="form-label"> Teléfono </label>
+                        <input name="phone" type="tel" class="form-control" id="edit-phone" required>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn-update" type="button" class="btn btn-primary">Update Client</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="modal fade" id="contratoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New Client</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="error">
+            </div>
+            <div class="modal-body">
+
+                <form id="formContrato" method="POST" action="" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label for="monto" class="form-label">Monto del contrato $</label>
+                        <input name="monto" type="number" class="form-control " min="0" id="nonto"
+                            placeholder="Monto de contrato" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_inicio" class="form-label">Fecha Inicio</label>
+                        <input name="fecha_inicio" type="date" class="form-control" id="fecha_inicio" value="">
+                    </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn-save" type="button" class="btn btn-primary">Save contrato</button>
+
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>

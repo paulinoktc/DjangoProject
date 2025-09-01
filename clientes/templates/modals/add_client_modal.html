@@ -1,0 +1,41 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New Client</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="error">
+            </div>
+            <div class="modal-body">
+
+                <form id="formulario" method="POST" action="" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre Cliente</label>
+                        <input name="name" type="text" class="form-control " id="name" placeholder="Nombre Cliente"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo Cliente</label>
+                        <input name="email" type="email" class="form-control " id="email" placeholder="Correo@mail.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label"> Telefono </label>
+                        <input name="phone" type="tel" class="form-control " id="phone" placeholder="Telefono" required>
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn-save" type="button" class="btn btn-primary">Save client</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+# docker-compose.yml
+version: "3.9"
+
+services:
+  django:
+    build: .
+    container_name: django-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      DJANGO_DEBUG: "1"
+      DJANGO_SECRET_KEY: "change-me"
+      DB_NAME: "bitnami_myapp"     # o el nombre de DB que uses
+      DB_USER: "bn_myapp"          # tu usuario
+      DB_PASSWORD: ""              # tu password (si aplica)
+      DB_HOST: "mariadb"           # nombre del contenedor MariaDB
+      DB_PORT: "3306"
+    networks:
+      - laravel-network
+
+networks:
+  laravel-network:
+    external: true
